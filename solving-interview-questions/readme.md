@@ -30,13 +30,13 @@ This video does a good job of explaining the REACTO method:
 
 ### Places To Practice Interview Problems
 
-- [Codewars](https://www.codewars.com/) - our recommendation for getting started
-- [LeetCode](https://leetcode.com/)
-- [HackerRank](https://www.hackerrank.com/)
+- [Codewars](https://www.codewars.com/) - our recommendation for getting started—has a huge range of entirely free problems and a good community
+- [HackerRank](https://www.hackerrank.com/) - another good starting place, has free problems from fundamentals to algorithms, some features require payment
+- [LeetCode](https://leetcode.com/) - a popular platform for interview prep, same free/paid model as HackerRank, more focus on algorithms and data structures
 
 ### Codewars Problems
 
-A collection of interview problems from Codewars.
+A curated collection of interview problems from Codewars.
 
 - [Well Of Ideas - Easy](https://www.codewars.com/kata/57f222ce69e09c3630000212/)
 - [Well Of Ideas - Harder](https://www.codewars.com/kata/57f22b0f1b5432ff09001cab)
