@@ -50,9 +50,9 @@ it('add function adds two numbers', () => {
 This test is straightforward: we're calling the `add` function with `1` and `2` and expecting the result to be `3`. Of course, we haven't written the `add` function yet, so this test will fail. Let's write the implementation:
 
 ```javascript
-function add(a, b) {
-  const answer = a + b;
+function add(x, y) {
   
+  const answer = x + y;
   return answer;
 }
 ```
@@ -62,7 +62,7 @@ Now, when we run the test, it should pass. We've successfully followed TDD!
 However, there is a problem with this test: with only one example (1 + 2), we can't be sure that the `add` function works for all cases. For example, this code would pass the test as well!
 
 ```javascript
-function add(a, b) {
+function add(x, y) {
   return 3;
 }
 ```
@@ -97,9 +97,9 @@ it('add function handles numbers in string format', () => {
 As you can see, our function does not pass these tests. But we can write some code that does:
 
 ``` javascript
-function add(a, b) {
-  const result = Number(a) + Number(b);
+function add(x, y) {
   
+  const result = Number(x) + Number(y);
   return result;
 }
 ```
@@ -111,8 +111,8 @@ Now, while we have finished this function, it's not perfect. Here's where the th
 First, we'll remove the intermediate variable `answer`.
 
 ```javascript
-function add(a, b) {
-  return Number(a) + Number(b);
+function add(x, y) {
+  return Number(x) + Number(y);
 }
 ```
 
@@ -121,7 +121,7 @@ If we re-run the tests, we can see that we're still passing. This is the power o
 Now that we have one statement in our function, it makes sense to convert it to an arrow function. Let's do that:
 
 ```javascript
-const add = (a, b) => Number(a) + Number(b);
+const add = (x, y) => Number(x) + Number(y);
 ```
 
 Now, thanks to Test-Driven Development, we have what is likely very higher-quality code than we would have without it.
