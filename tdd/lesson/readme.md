@@ -149,9 +149,7 @@ Run those tests, and you'll see that they fail.
 Let's implement the `add` function to handle adding 3 numbers.
 
 ```javascript
-const add = (x, y, z) => {
-  return Number(x) + Number(y) + Number(z);
-};
+const add = (x, y, z) => Number(x) + Number(y) + Number(z);
 ```
 
 Uh oh! Our previous tests are failing. Why is that? It's because we changed the function signature from `(x, y)` to `(x, y, z)`. This is a great example of how TDD can help catch issues early on. Let's update our function to handle either 2 _or_ 3 numbers:
