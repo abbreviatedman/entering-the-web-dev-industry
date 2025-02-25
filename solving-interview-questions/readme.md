@@ -13,12 +13,20 @@ Tips, strategies, and sample problems for the tech interview.
 7. **Discuss**: Be prepared to discuss your solution with the interviewer.
 8. **Practice**: Practice as many problems as you can to get better at solving them.
 
-### How To Impress Interviewers
+### One Way To Approach Interview Problems
 
-1. **Communicate**: Make sure you communicate your thought process to the interviewer. Talk through your solution and explain your reasoning.
-2. **Ask Questions**: If you're not sure about something, ask questions. It's better to ask for clarification than to make assumptions.
-3. **Test Cases**: Make sure you test your code with different test cases. This shows that you're thorough and care about the quality of your code.
-4. **Optimize**: Try to optimize your solution. Interviewers are looking for candidates who can think critically and come up with efficient solutions.
+The REACTO method is one easy-to-memorize set of steps for solving interview problems:
+
+1. **Repeat**: Make sure you understand the problem by repeating it back to the interviewer.
+2. **Examples**: Write down some examples and test cases.
+3. **Approach**: Explain your approach to the interviewer.
+4. **Code**: Write the code for your solution.
+5. **Test**: Test your code with the examples you wrote down.
+6. **Optimize**: Think about how you can optimize your solution.
+
+This video does a good job of explaining the REACTO method:
+
+[The REACTO Method](https://www.youtube.com/watch?v=DIR_rxusO8Q!)
 
 ### Places To Practice Interview Problems
 
