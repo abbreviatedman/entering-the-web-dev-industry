@@ -2,17 +2,6 @@
 
 Tips, strategies, and sample problems for the tech interview.
 
-### How To Approach Interview Problems
-
-1. **Understand the Problem**: Make sure you understand the problem before you start writing code. Ask clarifying questions if needed.
-2. **Test Cases**: Make sure you understand the input and output requirements. Write down some test cases.
-3. **Brute Force**: Start with a brute force solution. Write down the steps you would take to solve the problem in plain English.
-4. **Optimize**: Once you have a working solution, think about how you can optimize it.
-5. **Write Code**: Write the code for your optimized solution.
-6. **Test**: Test your code with the test cases you wrote down earlier.
-7. **Discuss**: Be prepared to discuss your solution with the interviewer.
-8. **Practice**: Practice as many problems as you can to get better at solving them.
-
 ### One Way To Approach Interview Problems
 
 The REACTO method is one easy-to-memorize set of steps for solving interview problems:
