@@ -51,8 +51,8 @@ This test is straightforward: we're calling the `add` function with `1` and `2` 
 
 ```javascript
 function add(x, y) {
-  
   const answer = x + y;
+
   return answer;
 }
 ```
@@ -75,7 +75,7 @@ Let's add a few more test cases to ensure our `add` function works as expected:
 it('add function adds two numbers', () => {
   const result = add(1, 2);
   expect(result).toBe(3);
-  
+
   const result2 = add(5, 7);
   expect(result2).toBe(12);
 });
@@ -98,8 +98,8 @@ As you can see, our function does not pass these tests. But we can write some co
 
 ``` javascript
 function add(x, y) {
-  
   const result = Number(x) + Number(y);
+
   return result;
 }
 ```
