@@ -64,9 +64,10 @@ In today's assignment, we will be using TDD in a real-world scenario, to calcula
 
 1. Run `npm init -y` to create a `package.json` file in this directory.
 2. Install Jest by running `npm install jest`.
-3. Create an `index.js` file and, in that file, a function to work in and a `module.exports` line to export that function.
-4. Import the function in an `index.test.js` file with `require`.
-5. Either directly run Jest using `jest` (for a one-time run) or `jest --watch-all` (for run-on-save), or add script(s) to your `package.json` file to run Jest.
+3. Create an `index.js` file and, in that file, a function to work in, and a `module.exports` line to export that function.
+4. Import the function in an `index.test.js` file with `require`. Note that if you exported as an object,you will need to destructure the function out of the object—that is, if you exported in curlies, require in curlies. If you just did `module.exports = functionName`, you can require without curlies.
+5. Add a test script to your `package.json` file that runs Jest. You can do this by changing the `test` property to the string "jest". Alternately, change it to `jest --watch-all` to run Jest in watch mode. Remember that this is JSON, which means double quotes around all strings, and no trailing commas.
+6. Run your tests with `npm test`.
 
 If you haven't created a test yet, you will get an error. **This error is normal and expected**. It's simply Jest telling you that you don't have any tests yet.
 
@@ -85,6 +86,8 @@ Make sure to **export your function in `index.js`**, then ensure **you're import
 
 2. Write a function (or edit the function if you've written it) so that it takes in the input and returns the valid output.
 
+You can call it whatever you'd like and write whatever code you'd like, of course, but here is a suggested solution:
+
 ``` javascript
 function getCartTotal(cart) {
   if (cart.length === 0) {
@@ -95,9 +98,9 @@ function getCartTotal(cart) {
 
 Note that **you will likely have a better way to handle this case later**. Your code will eventually evolve to not needing that `if`. Just **make sure you continue to pass this test!**
 
-### General Workflow
+### General Workflow Past The First Test
 
-1. Write a failing test for the current requirement.
+1. Write a failing test for the current requirement (see the list of requirements up above).
 2. Write the minimum amount of code to pass the test.
 3. Refactor the code if it can be improved upon, ensuring you're still passing the test.
 4. Repeat the process for the next requirement, *ensuring you're still passing previous tests**.
@@ -108,5 +111,5 @@ In a project's directory:
 
 - Create index.js and index.test.js files. (Or other files if you want to test in multiple files, keeping the same `.js` and accompanying `.test.js` pattern.)
 - Make it an `npm`-controlled directory with `npm init -y`. This will create a `package.json` file.
-- Install `jest` with `npm install jest`. (Recommended: install `jest` globally on your machine with `npm install -g jest`.)
+- Install `jest` with `npm install jest`.
 - In the `package.json` file, change the `test` script to `jest` (by changing the `test` property to the string "jest") and, optionally, add a `watch` script set to the string "jest --watch-all". You can change these to whatever you want if you have a particular test command you want to run. Now you can run those two commands with `npm run test` (or just `npm test`) and `npm run watch`, respectively.
