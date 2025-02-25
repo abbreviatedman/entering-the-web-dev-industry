@@ -101,3 +101,12 @@ Note that **you will likely have a better way to handle this case later**. Your 
 2. Write the minimum amount of code to pass the test.
 3. Refactor the code if it can be improved upon, ensuring you're still passing the test.
 4. Repeat the process for the next requirement, *ensuring you're still passing previous tests**.
+
+### Steps To Set Up A Test Environment From Scratch In The Future
+
+In a project's directory:
+
+- Create index.js and index.test.js files. (Or other files if you want to test in multiple files, keeping the same `.js` and accompanying `.test.js` pattern.)
+- Make it an `npm`-controlled directory with `npm init -y`. This will create a `package.json` file.
+- Install `jest` with `npm install jest`. (Recommended: install `jest` globally on your machine with `npm install -g jest`.)
+- In the `package.json` file, change the `test` script to `jest` (by changing the `test` property to the string "jest") and, optionally, add a `watch` script set to the string "jest --watch-all". You can change these to whatever you want if you have a particular test command you want to run. Now you can run those two commands with `npm run test` (or just `npm test`) and `npm run watch`, respectively.
