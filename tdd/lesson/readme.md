@@ -126,6 +126,79 @@ const add = (x, y) => Number(x) + Number(y);
 
 Now, thanks to Test-Driven Development, we have what is likely very higher-quality code than we would have without it.
 
+### Extending The Functionality - 3 Numbers
+
+Now that we have a solid `add` function, let's extend its capabilities. We'll add a new feature that allows it to handle 3 numbers.
+
+This is a great opportunity to come up with the test cases together as a class! What are some scenarios we should test for when adding 3 numbers?
+
+Here is one possible test case:
+
+```javascript
+it('add function handles adding 3 numbers', () => {
+  const result = add(1, 2, 3);
+  expect(result).toBe(6);
+
+  const result2 = add(5, 7, 9);
+  expect(result2).toBe(21);
+});
+```
+
+Run those tests, and you'll see that they fail.
+
+Let's implement the `add` function to handle adding 3 numbers.
+
+```javascript
+const add = (x, y, z) => {
+  return Number(x) + Number(y) + Number(z);
+};
+```
+
+Uh oh! Our previous tests are failing. Why is that? It's because we changed the function signature from `(x, y)` to `(x, y, z)`. This is a great example of how TDD can help catch issues early on. Let's update our function to handle either 2 _or_ 3 numbers:
+
+```javascript
+const add = (x, y, z) => {
+  if (z === undefined) {
+	return Number(x) + Number(y);
+  }
+
+  return Number(x) + Number(y) + Number(z);
+};
+```
+
+### Handling Arbitrary Numbers of Arguments
+
+Now, let's extend our `add` function to handle an arbitrary number of arguments. This is a great opportunity to use the `...rest` syntax in JavaScript. First, though, think about (on your own or as an exercise) what test cases you would write for this new functionality.
+
+Here's one possible solution:
+
+```javascript
+it('add function handles adding an arbitrary number of arguments', () => {
+  const result = add(1, 2, 3, 4, 5);
+  expect(result).toBe(15);
+
+  const result2 = add(5, 7, 9, 11, 13, 15);
+  expect(result2).toBe(60);
+});
+```
+
+Now, let's implement the `add` function to handle an arbitrary number of arguments:
+
+```javascript
+const add = (...numbers) => {
+  let sum = 0;
+  for (const num of numbers) {
+	sum += Number(num);
+  }
+
+  return sum;
+};
+```
+
+`...rest` syntax allows us to pass in any number of arguments, which are then collected into an array called `numbers`. We can then iterate over this array, summing up the numbers to get the final result.
+
+Run the tests, and you should see that they pass. We've successfully extended our `add` function to handle an arbitrary number of arguments, and we've used TDD to guide us through the process.
+
 ### Conclusion
 
 In today's lesson, we embarked on a journey through the principles and practices of Test-Driven Development (TDD). We began by understanding TDD in the abstract, emphasizing its importance in writing cleaner, more reliable code and the significant benefits it brings to software development, including early error detection, improved design, and safer refactoring.
