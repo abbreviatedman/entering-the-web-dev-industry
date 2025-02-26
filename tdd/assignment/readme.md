@@ -5,7 +5,7 @@ In today's assignment, we will be using TDD in a real-world scenario, to calcula
 ### Requirements
 
 1. The function should take in an array of cart items, where each item is an object with a name, price, weight, and quantity.
-2. The function should return the total price of all items in the cart added together.
+2. The function should return the total price of all items in the cart added together, as a user-facing string with dollars and cents.
 3. The function will also take in a string representing the state the user is in, using it to adjust the price accordingly.
 4. The function will add a shipping cost that's based on the total weight of the cart.
 5. The function will remove the shipping cost if the total price without shipping or tax reaches a certain threshold.
@@ -16,49 +16,49 @@ In today's assignment, we will be using TDD in a real-world scenario, to calcula
 
 **Example:**
 
-[] -> 0
+[] -> "$0.00"
 
 2. The function should return the total price for a single item in the cart.
 
 **Examples:**
 
-[{ name: 'apple', price: 1, weight: 0, quantity: 1 }] -> 1
-[{ name: 'banana', price: 2, weight: 0, quantity: 1 }] -> 2
+[{ name: 'apple', price: 1, weight: 0, quantity: 1 }] -> "$1.00"
+[{ name: 'banana', price: 2, weight: 0, quantity: 1 }] -> "$2.00"
 
 3. The function should return the total price for multiple items in the cart.
 
 **Examples:**
 
-[{ name: 'apple', price: 1, weight: 0, quantity: 1 }, { name: 'banana', price: 2, weight: 0, quantity: 1 }] -> 3
-[{ name: 'mango', price: 3, weight: 0, quantity: 1 }, { name: 'orange', price: 4, weight: 0, quantity: 1 }] -> 7
+[{ name: 'apple', price: 1, weight: 0, quantity: 1 }, { name: 'banana', price: 2, weight: 0, quantity: 1 }] -> "$3.00"
+[{ name: 'mango', price: 3, weight: 0, quantity: 1 }, { name: 'orange', price: 4, weight: 0, quantity: 1 }] -> "$7.00"
 
 4. The function should return the total price for multiple items with quantity taken into account.
 
 **Examples:**
 
-[{ name: 'apple', price: 1, weight: 0, quantity: 2 }, { name: 'banana', price: 2, weight: 0, quantity: 1 }] -> 4
-[{ name: 'mango', price: 3, weight: 0, quantity: 3 }, { name: 'orange', price: 4, weight: 0, quantity: 2 }] -> 17
+[{ name: 'apple', price: 1, weight: 0, quantity: 2 }, { name: 'banana', price: 2, weight: 0, quantity: 1 }] -> "$4.00"
+[{ name: 'mango', price: 3, weight: 0, quantity: 3 }, { name: 'orange', price: 4, weight: 0, quantity: 2 }] -> "$17.00"
 
 5. The function should return the total price for multiple items with shipping taken into account. Shipping will be $2 per pound of weight.
 
 **Examples:**
 
-[{ name: 'apple', price: 1, weight: 2, quantity: 2 }, { name: 'banana', price: 2, weight: 1, quantity: 1 }] -> 10 ($4 pre-shipping + $6 shipping)
-[{ name: 'mango', price: 3, weight: 3, quantity: 3 }, { name: 'orange', price: 4, weight: 2, quantity: 2 }] -> 27 ($17 pre-shipping + $10 shipping)
+[{ name: 'apple', price: 1, weight: 2, quantity: 2 }, { name: 'banana', price: 2, weight: 1, quantity: 1 }] -> "$10.00" ($4 pre-shipping + $6 shipping)
+[{ name: 'mango', price: 3, weight: 3, quantity: 3 }, { name: 'orange', price: 4, weight: 2, quantity: 2 }] -> "$27.00" ($17 pre-shipping + $10 shipping)
 
 6. The function should return the total price for multiple items with shipping taken into account. Shipping will be $2 per pound of weight. If the total price without shipping or tax reaches $100, the shipping cost will be removed.
 
 **Examples:**
 
-[{ name: 'watermelon', price: 15, weight: 10, quantity: 20 }, { name: 'cantaloupe', price: 10, weight: 5, quantity: 1 }] -> $310 ($310 pre-shipping, no shipping cost added)
-[{ name: 'watermelon', price: 15, weight: 10, quantity: 6 }, { name: 'cantaloupe', price: 10, weight: 5, quantity: 1 }] -> $100 (100 pre-shipping, no shipping added)
+[{ name: 'watermelon', price: 15, weight: 10, quantity: 20 }, { name: 'cantaloupe', price: 10, weight: 5, quantity: 1 }] -> "$310.00" ($310 pre-shipping, no shipping cost added)
+[{ name: 'watermelon', price: 15, weight: 10, quantity: 6 }, { name: 'cantaloupe', price: 10, weight: 5, quantity: 1 }] -> "$100.00" (100 pre-shipping, no shipping added)
 
 7. The function should take tax into account if passed a second argument. 3 states should be handled: NY has an 8% tax, MA has a 10% tax, NJ has a 5% tax. These taxes should apply only to the pre-shipping total.
 
 **Examples:**
 
-[{ name: 'pumpkin', price: 10, weight: 20, quantity: 4 }, { name: 'mango', price: 5, weight: 12, quantity: 32 }], 'MA' -> $220 ($200 pre-shipping, plus a 10% tax makes $220, no shipping added)
-[{ name: 'pumpkin', price: 10, weight: 5, quantity: 1 }, { name: 'mango', price: 5, weight: 3, quantity: 8 }], 'NJ' -> $68.50 ($50 pre-shipping, plus a 5% tax makes $52.50, plus $16 shipping)
+[{ name: 'pumpkin', price: 10, weight: 20, quantity: 4 }, { name: 'mango', price: 5, weight: 12, quantity: 32 }], 'MA' -> "$220.00" ($200 pre-shipping, plus a 10% tax makes $220, no shipping added)
+[{ name: 'pumpkin', price: 10, weight: 5, quantity: 1 }, { name: 'mango', price: 5, weight: 3, quantity: 8 }], 'NJ' -> "$68.50" ($50 pre-shipping, plus a 5% tax makes $52.50, plus $16 shipping)
 
 ### Setup
 
