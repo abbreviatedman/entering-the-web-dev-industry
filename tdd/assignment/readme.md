@@ -12,7 +12,7 @@ In today's assignment, we will be using TDD in a real-world scenario, to calcula
 
 ### Detailed Requirements
 
-1. The function should return 0 if given an empty array.
+1. The function should return 0 dollars and 0 cents if there are no items in the cart.
 
 **Example:**
 
