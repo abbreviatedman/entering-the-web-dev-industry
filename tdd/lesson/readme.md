@@ -106,7 +106,7 @@ function add(x, y) {
 
 Thanks to our tests, we caught this issue early and were able to fix it before it became a problem. This is the power of Test-Driven Development!
 
-Now, while we have finished this function, it's not perfect. Here's where the third step from TDD. We had Red (tests failing), and Green (tests passing), and now we have Refactor. Let's refactor our `add` function to make it more readable and succinct.
+Now, while we have finished this function, it's not perfect. Here's where the third step from TDD comes in. We did Red (tests failing), and Green (tests passing), and now we can Refactor. Let's refactor our `add` function to make it more readable and succinct.
 
 First, we'll remove the intermediate variable `answer`.
 
@@ -176,7 +176,7 @@ Now, our function is concise, readable, and handles both 2 and 3 numbers. Run th
 
 Now, let's extend our `add` function to handle an arbitrary number of arguments. This is a great opportunity to use the `...rest` syntax in JavaScript. First, though, think about (on your own or as an exercise) what test cases you would write for this new functionality.
 
-Here's one possible solution:
+Here's one possible set of test cases:
 
 ```javascript
 it('handles adding an arbitrary number of arguments', () => {
