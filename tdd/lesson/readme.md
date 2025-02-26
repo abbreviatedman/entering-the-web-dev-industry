@@ -5,7 +5,7 @@ You can play with the currently set up environment from this codealong endpoint 
 ### Steps To Get Going
 
 - Install `jest` with `npm install`, which will look at the `dependencies` section of the `package.json` file and install what's there--in this case, it's just `jest`.
-- Run the tests with `npm test` for a one-time run or `npm run watch` for a run-again-on-save workflow.
+- Run the tests with `npm test`. You can quit the test runner by typing the letter `q`.
 
 ### Introduction to Test-Driven Development (TDD)
 

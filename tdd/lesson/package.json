@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "watch": "jest --watch-all"
+    "test": "jest --watch-all"
   },
   "keywords": [],
   "author": "Colin (the one and only)",
