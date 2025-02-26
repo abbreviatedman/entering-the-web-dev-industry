@@ -84,7 +84,7 @@ it('should return 0 dollars and 0 cents if there are no items in the cart', () =
 })
 ```
 
-Make sure to **export your function in `index.js`**, then ensure **you're importing your function in `index.test.js`**, and, finally, make sure **the function names match**.
+Make sure to **export your function in `index.js`**, then ensure **you're importing your function in `index.test.js`**.
 
 2. Write a function (or edit the function if you've written it) so that it takes in the input and returns the valid output.
 
