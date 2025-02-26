@@ -164,6 +164,14 @@ const add = (x, y, z) => {
 };
 ```
 
+This is good, but we can refactor it to be far shorter. Let's make the `z` parameter optional by setting it to `0` by default:
+
+```javascript
+const add = (x, y, z = 0) => Number(x) + Number(y) + Number(z);
+```
+
+Now, our function is concise, readable, and handles both 2 and 3 numbers. Run the tests, and you should see that they pass. We've successfully extended our `add` function to handle 3 numbers, all thanks to Test-Driven Development.
+
 ### Handling Arbitrary Numbers of Arguments
 
 Now, let's extend our `add` function to handle an arbitrary number of arguments. This is a great opportunity to use the `...rest` syntax in JavaScript. First, though, think about (on your own or as an exercise) what test cases you would write for this new functionality.
@@ -186,7 +194,7 @@ Now, let's implement the `add` function to handle an arbitrary number of argumen
 const add = (...numbers) => {
   let sum = 0;
   for (const num of numbers) {
-	sum += Number(num);
+	sum += num;
   }
 
   return sum;
@@ -195,7 +203,20 @@ const add = (...numbers) => {
 
 `...rest` syntax allows us to pass in any number of arguments, which are then collected into an array called `numbers`. We can then iterate over this array, summing up the numbers to get the final result.
 
-Run the tests, and you should see that they pass. We've successfully extended our `add` function to handle an arbitrary number of arguments, and we've used TDD to guide us through the process.
+But if you run these tests,you'll see that they fail. Why is that? It's because when we were refactoring, we forgot to make sure we were always working with numbers. Let's fix that:
+
+```javascript
+const add = (...numbers) => {
+  let sum = 0;
+  for (const num of numbers) {
+	sum += Number(num);
+  }
+
+  return sum;
+};
+```
+
+Now, if you run the tests, you should see that they pass. Thanks to our tests, we caught this issue early and were able to fix it before it became a problem. This is the power of Test-Driven Development!
 
 ### Conclusion
 
