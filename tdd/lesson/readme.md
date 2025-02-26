@@ -41,7 +41,7 @@ Let's embark on this journey to write better, more reliable code through the pow
 We'll start with a simple `add` function that takes two numbers and returns their sum. Here's the test we'll write:
 
 ```javascript
-it('add function adds two numbers', () => {
+it('adds two numbers', () => {
   const result = add(1, 2);
   expect(result).toBe(3);
 });
@@ -72,7 +72,7 @@ Although this might seem like a silly example, it highlights the importance of w
 Let's add a few more test cases to ensure our `add` function works as expected:
 
 ```javascript
-it('add function adds two numbers', () => {
+it('adds two numbers', () => {
   const result = add(1, 2);
   expect(result).toBe(3);
 
@@ -86,7 +86,7 @@ Now, we have two test cases for the `add` function. If we run the tests, they wi
 We've successfully tested our function with multiple cases, ensuring it works as expected. However, there's still a problem with our `add` function: it only works with numbers. If we pass in strings, it will concatenate them instead of adding them. Let's add a test case to catch this issue:
 
 ```javascript
-it('add function handles numbers in string format', () => {
+it('handles numbers in string format', () => {
   const result = add('1', '2');
   expect(result).toBe(3);
   const result2 = add('5', '7');
@@ -135,7 +135,7 @@ This is a great opportunity to come up with the test cases together as a class! 
 Here is one possible test case:
 
 ```javascript
-it('add function handles adding 3 numbers', () => {
+it('handles adding 3 numbers', () => {
   const result = add(1, 2, 3);
   expect(result).toBe(6);
 
@@ -171,7 +171,7 @@ Now, let's extend our `add` function to handle an arbitrary number of arguments.
 Here's one possible solution:
 
 ```javascript
-it('add function handles adding an arbitrary number of arguments', () => {
+it('handles adding an arbitrary number of arguments', () => {
   const result = add(1, 2, 3, 4, 5);
   expect(result).toBe(15);
 
