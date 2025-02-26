@@ -18,6 +18,8 @@ In today's assignment, we will be using TDD in a real-world scenario, to calcula
 
 [] -> "$0.00"
 
+**HINT**: look up how to format a number as a string with two decimal places in JavaScript. **Pay careful attention** to the "expected" and "received" if your string is off by a character or two!
+
 2. The function should return the total price for a single item in the cart.
 
 **Examples:**
