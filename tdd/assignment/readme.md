@@ -78,6 +78,8 @@ If you haven't created a test yet, you will get an error. **This error is normal
 
 1. Write a failing test for the first requirement. Once you've done so, run Jest to see the test fail.
 
+**Note that our test cases and description are taken directly from the requirements above.** Although thinking through test cases and feature descriptions is an important part of the process, we've done that for you here to help you get started.
+
 ```javascript
 it('should return 0 dollars and 0 cents if there are no items in the cart', () => {
   expect(getCartTotal([])).toBe('$0.00');
