@@ -4,13 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "reveal": "reveal-md code-roles-deck.md"
+    "start": "reveal-md code-roles-deck.md"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "reveal-md": "^6.1.3"
+    "reveal-md": "^6.1.4"
   }
 }
